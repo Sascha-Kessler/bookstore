@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    background-color: 	#FAF5E4;
+    color: #2E2E2E;
+}
+
+h1{
+    color:	#FAF5E4;
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 24px;
+    height: 128px;
+    background-color: 	#5C3A21;
+}
+
+header img{
+    height: 64px;
+    filter: invert(95%) sepia(14%) saturate(746%) hue-rotate(52deg) brightness(102%) contrast(100%);
+}
+
+.books_section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 400px;
+    background-color: #E7D8C1;
+    margin-top: 48px;
+    border-radius: 24px;
+}
+
+#books_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.template_img{
+    height: 164px;
+}
