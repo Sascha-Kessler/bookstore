@@ -59,6 +59,10 @@ header img{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-right: 24px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+}
+
+#addSection{
     padding-bottom: 24px;
 }

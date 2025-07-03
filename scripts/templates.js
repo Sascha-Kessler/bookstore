@@ -31,6 +31,10 @@ function getBookTemplate(index){
     <p>Preis : ${book.price.toFixed(2)} EUR</p>
     <p>Erschienen : ${book.publishedYear}</p>
     ${commentsHtml}
+    <div id="addSection">
+            <input type="text" name="addText" placeholder="Kommentar hier schreiben" class="add_comment_text">
+             <button>Abschicken</button>
+        </div>
     </div>`
    
 }
