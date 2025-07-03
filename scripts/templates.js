@@ -17,7 +17,7 @@ function getBookTemplate(index){
         for (let i = 0; i < booksComments.length; i++) {
         commentsHtml += `
             <li>
-                <span class="comment_user">${booksCommentsUserName[i]}</span>:
+                <span class="comment_user">${booksCommentsUserName[i] + ":"}</span>
                 <span class="comment_text">${booksComments[i]}</span>
             </li>`;
         }
