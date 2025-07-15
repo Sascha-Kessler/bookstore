@@ -8,6 +8,10 @@ h1{
     color:	#FAF5E4;
 }
 
+h2{
+    text-align: center;
+}
+
 header{
     display: flex;
     justify-content: flex-start;
@@ -28,7 +32,6 @@ header img{
     flex:1;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     height: 550px;
     width: 400px;
     background-color: #E7D8C1;
@@ -44,7 +47,27 @@ header img{
 }
 
 .template_img{
+    display: block;
+    margin: auto;
     height: 164px;
+    width: 164px;
+}
+
+.like_btn{
+    height: 48px;
+}
+
+.book_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.book_info ul{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 12px;
 }
 
 .comment_user{
