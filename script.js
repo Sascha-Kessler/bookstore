@@ -1,33 +1,15 @@
 let booksKeys = Object.keys(books);
-let ourBooks = [];
+let myBooks = [];
 
-for (let i = 0; i < booksKeys.length; i++) {  
-ourBooks.push(books[booksKeys[i]]);
-}
-
-
+for (let index = 0; index < booksKeys.length; index++) {
+  myBooks.push(books[booksKeys[index]]);
+} 
 
 function renderBookSection(){
-  let booksKeysRef = document.getElementById("books_section")
-  booksKeysRef.innerHTML = "";
-
-  for (let index = 0; index < ourBooks.length; index++) {
-    booksKeysRef.innerHTML += getBookTemplate(index);
-  }
-
-}
-
-
-
-
-
-
-    
-    
-
+  let myBook = document.getElementById("books_section");
+  myBooks.innerHTML = "";
   
-
-
-
-
-
+  for (let myBookIndex = 0; myBookIndex < myBooks.length; myBookIndex++) {
+    myBook.innerHTML += getBooksTemplate(myBookIndex);
+  }
+}
