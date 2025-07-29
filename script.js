@@ -14,11 +14,16 @@ function renderBookSection(){
       }
 }
 
-function dNone(){
-    let displayNone = 
-    document.getElementsByClassName('like_btn');
+function toggleLike(btn){
+    let otherBtn;
 
-        for (let dNone of displayNone) {
-          dNone.classList.toggle('d_none');
-        }
-}
+    if (btn.classList.contains('d_none')) {
+        otherBtn = btn.parentElement.querySelector('.like_btn:not(.d_none)')
+    } else {
+        otherBtn =   btn.parentElement.querySelector('.like_btn.d_none');
+    }
+      btn.classList.toggle('d_none');
+      otherBtn.classList.toggle('d_none');
+    }
+
+  

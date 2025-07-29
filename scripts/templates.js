@@ -1,7 +1,6 @@
 
 function getBooksTemplate(myBookIndex){
     let book = myBooks[myBookIndex];
-    console.log(book);
     
     return `<div class="books_section">
                 <h2>${book.name}</h2>
@@ -15,8 +14,9 @@ function getBooksTemplate(myBookIndex){
                         <li>Erschienen: ${book.publishedYear}</li>
                     </ul>
                     <div>
-                    <img onclick="dNone()" class="like_btn" src="./img/likeBtn.png" alt="like_button">
-                    <img onclick="dNone()" class="like_btn d_none" src="./img/likeBtnLiked.png" alt="like_button_liked">
+                    <img onclick="toggleLike(this)" class="like_btn" src="./img/likeBtn.png" alt="like_button">
+                    <img onclick="toggleLike(this)" class="like_btn d_none" src="./img/likeBtnLiked.png" alt="like_button_liked">
+                    <p>${book.likes}</p>
                     </div>
                 </div>               
             </div>`
