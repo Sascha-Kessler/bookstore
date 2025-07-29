@@ -4,6 +4,10 @@ body{
     color: #2E2E2E;
 }
 
+.d_none{
+    display: none;
+}
+
 h1{
     color:	#FAF5E4;
 }
@@ -54,6 +58,10 @@ header img{
 }
 
 .like_btn{
+    height: 48px;
+}
+
+.like_btn_liked{
     height: 48px;
 }
 

@@ -14,7 +14,10 @@ function getBooksTemplate(myBookIndex){
                         <li>Genre: ${book.genre}</li>
                         <li>Erschienen: ${book.publishedYear}</li>
                     </ul>
-                    <img class="like_btn" src="./img/likeBtn.png" alt="like_button">
+                    <div>
+                    <img onclick="dNone()" class="like_btn" src="./img/likeBtn.png" alt="like_button">
+                    <img onclick="dNone()" class="like_btn d_none" src="./img/likeBtnLiked.png" alt="like_button_liked">
+                    </div>
                 </div>               
             </div>`
 }
