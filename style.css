@@ -59,10 +59,7 @@ header img{
 
 .like_btn{
     height: 48px;
-}
-
-.like_btn_liked{
-    height: 48px;
+    cursor: pointer;
 }
 
 .book_info{
