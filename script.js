@@ -29,14 +29,19 @@ function toggleLike(btn){
       otherBtn.classList.toggle('d_none');
     }
 
-function renderLiked(myBooks){
-   let liked 
-    for (let likedIndex = 0; likedIndex < myBooks.length; likedIndex++) {
-      liked = document.querySelector('.like_btn')
-      if (myBooks[likedIndex].liked) {
-     liked.classList.toggle('d_none')
-}
+function renderLiked(booksArray){
+   let liked = document.querySelectorAll('.books_section');
 
+    for (let likedIndex = 0; likedIndex < booksArray.length; likedIndex++) {
+      let [emptyBtn, filledBtn] = liked[likedIndex].querySelectorAll('.like_btn');
+
+        if (booksArray[likedIndex].liked) {
+              emptyBtn.classList.add('d_none');
+              filledBtn.classList.remove('d_none');
+        } else{
+              emptyBtn.classList.remove('d_none');
+              filledBtn.classList.add('d_none');
+              }
     } 
   }
 function init(){
