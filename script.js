@@ -2,7 +2,10 @@
 let booksKeys = Object.keys(books);
 let myBooks = [];
 
-
+function init(){
+  renderBookSection();
+  renderLiked(myBooks)
+}
 
 for (let index = 0; index < booksKeys.length; index++) {
   myBooks.push(books[booksKeys[index]]);
@@ -19,15 +22,24 @@ function renderBookSection(){
 
 function toggleLike(btn){
     let otherBtn;
-
+    let likeCounter = document.getElementById('like_counter');
     if (btn.classList.contains('d_none')) {
-        otherBtn = btn.parentElement.querySelector('.like_btn:not(.d_none)')
+        otherBtn = btn.parentElement.querySelector('.like_btn:not(.d_none)');
+        
     } else {
         otherBtn = btn.parentElement.querySelector('.like_btn.d_none');
+        
     }
-   
+    
       btn.classList.toggle('d_none');
       otherBtn.classList.toggle('d_none');
+    
+      if (btn.classList.contains('like_btn_liked')) {
+        likeCounter.innerHTML --;
+      }else{
+        likeCounter.innerHTML ++;
+      }
+
     }
 
 function renderLiked(booksArray){
@@ -45,8 +57,5 @@ function renderLiked(booksArray){
               }
     } 
   }
-function init(){
-  renderBookSection();
-  renderLiked(myBooks)
-}
+
 

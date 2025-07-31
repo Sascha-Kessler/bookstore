@@ -15,8 +15,8 @@ function getBooksTemplate(myBookIndex){
                     </ul>
                     <div>
                     <img onclick="toggleLike(this);" class="like_btn" src="./img/likeBtn.png" alt="like_button">
-                    <img onclick="toggleLike(this)" class="like_btn d_none" src="./img/likeBtnLiked.png" alt="like_button_liked">
-                    <p>${book.likes}</p>
+                    <img onclick="toggleLike(this)" class="like_btn d_none like_btn_liked" src="./img/likeBtnLiked.png" alt="like_button_liked">
+                    <p id="like_counter">${book.likes}</p>
                     </div>
                 </div>               
             </div>`
