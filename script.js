@@ -22,7 +22,9 @@ function renderBookSection(){
 
 function toggleLike(btn){
     let otherBtn;
-    let likeCounter = document.getElementById('like_counter');
+    let likeCounter = btn.closest('.books_section');
+    
+    likeCounter = btn.parentElement.querySelector('.like_counter');
     if (btn.classList.contains('d_none')) {
         otherBtn = btn.parentElement.querySelector('.like_btn:not(.d_none)');
         
