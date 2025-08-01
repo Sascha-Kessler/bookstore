@@ -4,19 +4,20 @@ let myBooks = [];
 
 function init(){
   renderBookSection();
-  renderLiked(myBooks)
+  renderLiked(myBooks);
+  
 }
 
 for (let index = 0; index < booksKeys.length; index++) {
   myBooks.push(books[booksKeys[index]]);
-} 
+}
 
 function renderBookSection(){
   let myBook = document.getElementById('books_section');
   myBooks.innerHTML = "";
-  
+
       for (let myBookIndex = 0; myBookIndex < myBooks.length; myBookIndex++) {
-        myBook.innerHTML += getBooksTemplate(myBookIndex);
+        myBook.innerHTML += getBooksTemplate(myBookIndex); 
       }
 }
 
@@ -26,11 +27,9 @@ function toggleLike(btn){
     
     likeCounter = btn.parentElement.querySelector('.like_counter');
     if (btn.classList.contains('d_none')) {
-        otherBtn = btn.parentElement.querySelector('.like_btn:not(.d_none)');
-        
+        otherBtn = btn.parentElement.querySelector('.like_btn:not(.d_none)');   
     } else {
-        otherBtn = btn.parentElement.querySelector('.like_btn.d_none');
-        
+        otherBtn = btn.parentElement.querySelector('.like_btn.d_none');  
     }
     
       btn.classList.toggle('d_none');
@@ -41,7 +40,6 @@ function toggleLike(btn){
       }else{
         likeCounter.innerHTML ++;
       }
-
     }
 
 function renderLiked(booksArray){

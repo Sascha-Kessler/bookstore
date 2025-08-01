@@ -64,7 +64,12 @@ header img{
 
 .book_info{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info_section{
+    display: flex;
     justify-content: space-between;
 }
 
@@ -93,4 +98,10 @@ header img{
 
 #addSection{
     padding-bottom: 24px;
+}
+
+.comment_list{
+    flex-direction: row !important;
+    align-items: baseline !important;
+    justify-content: space-between !important;
 }
