@@ -31,6 +31,11 @@ function getBooksTemplate(myBookIndex){
                         <h2>Kommentare</h2>
                         ${commentHTML}
                     </div>
+                    <div>
+                        <input type="text" name="" id="" placeholder="Name...">
+                        <input type="text" name="" id="" placeholder="Kommentar eingeben...">
+                        <button>Abschicken</button>
+                    </div>
                 </div>               
             </div>`         
 }
