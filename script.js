@@ -27,20 +27,20 @@ function toggleLike(btn){
     
     likeCounter = btn.parentElement.querySelector('.like_counter');
     if (btn.classList.contains('d_none')) {
-        otherBtn = btn.parentElement.querySelector('.like_btn:not(.d_none)');   
-    } else {
-        otherBtn = btn.parentElement.querySelector('.like_btn.d_none');  
-    }
+          otherBtn = btn.parentElement.querySelector('.like_btn:not(.d_none)');   
+      } else {
+          otherBtn = btn.parentElement.querySelector('.like_btn.d_none');  
+      }
     
       btn.classList.toggle('d_none');
       otherBtn.classList.toggle('d_none');
     
       if (btn.classList.contains('like_btn_liked')) {
-        likeCounter.innerHTML --;
-      }else{
-        likeCounter.innerHTML ++;
-      }
-    }
+          likeCounter.innerHTML --;
+        }else{
+          likeCounter.innerHTML ++;
+        }
+}
 
 function renderLiked(booksArray){
    let liked = document.querySelectorAll('.books_section');
@@ -56,7 +56,7 @@ function renderLiked(booksArray){
               filledBtn.classList.add('d_none');
               }
     } 
-  }
+}
 
 function addComment(bookIndex){
   let nameInput = document.getElementById('new_comment_name'+bookIndex);
@@ -70,12 +70,13 @@ function addComment(bookIndex){
     name: name,
     comment: text
   });
+
   let commentSection = document.getElementById('comment_Section'+bookIndex);
   commentSection.innerHTML+=
-  `<ul class="comment_list">
-    <li>${name}:</li>
-    <li>${text}</li>
-  </ul>`
+      `<ul class="comment_list">
+          <li>${name}:</li>
+          <li>${text}</li>
+      </ul>`
 }
   
 

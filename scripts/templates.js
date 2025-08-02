@@ -38,9 +38,6 @@ function getBooksTemplate(myBookIndex){
                     <input type="text" name="" value="" id="new_comment_name${myBookIndex}" placeholder="Name...">
                     <input type="text" name="" id="new_comment${myBookIndex}" placeholder="Kommentar eingeben...">
                     <button onclick="addComment(${myBookIndex})">Abschicken</button>
-                </div>
-
-                <div ></div>
-                             
+                </div>                
             </div>`         
 }
