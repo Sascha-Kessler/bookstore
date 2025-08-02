@@ -58,4 +58,24 @@ function renderLiked(booksArray){
     } 
   }
 
+function addComment(bookIndex){
+  let nameInput = document.getElementById('new_comment_name'+bookIndex);
+  let textInput = document.getElementById('new_comment'+bookIndex);
+  
+  let name = nameInput.value.trim();
+  let text = textInput.value.trim();
+
+
+  myBooks[bookIndex].comments.push({
+    name: name,
+    comment: text
+  });
+  let commentSection = document.getElementById('comment_Section'+bookIndex);
+  commentSection.innerHTML+=
+  `<ul class="comment_list">
+    <li>${name}:</li>
+    <li>${text}</li>
+  </ul>`
+}
+  
 
