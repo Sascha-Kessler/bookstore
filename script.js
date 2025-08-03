@@ -5,7 +5,7 @@ let myBooks = [];
 function init(){
   renderBookSection();
   renderLiked(myBooks);
-  
+  saveToLocalStorage();
 }
 
 for (let index = 0; index < booksKeys.length; index++) {
@@ -51,7 +51,7 @@ function renderLiked(booksArray){
         if (booksArray[likedIndex].liked) {
               emptyBtn.classList.add('d_none');
               filledBtn.classList.remove('d_none');
-        } else{
+        } else {
               emptyBtn.classList.remove('d_none');
               filledBtn.classList.add('d_none');
               }
@@ -77,6 +77,8 @@ function addComment(bookIndex){
           <li>${name}:</li>
           <li>${text}</li>
       </ul>`
+
+  saveToLocalStorage();
 }
   
 
